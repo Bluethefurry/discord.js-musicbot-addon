@@ -324,7 +324,7 @@ try {
         if (this.anyoneCanSkip) return true;
         else if (this.botAdmins.includes(member.id)) return true;
         else if (this.ownerOverMember && member.id === this.botOwner) return true;
-        else if (queue.last.requester === member.id) return true;
+        else if (queue.last.requester !== undefined && queue.last.requester === member.id) return true;
         else if (this.isAdmin(member)) return true;
         else return false;
       };
