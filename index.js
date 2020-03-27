@@ -112,7 +112,7 @@ try {
 
         // Loop Command options
         this.loop = {
-          enabled: (options.loop == undefined ? true : (options.loop && typeof options.loop.enabled !== 'undefined' ? options.loop && options.loop.enabled : true)),
+          enabled: false,
           run: "loopFunction",
           alt: (options && options.loop && options.loop.alt) || [],
           help: (options && options.loop && options.loop.help) || "Sets the loop state for the queue.",
